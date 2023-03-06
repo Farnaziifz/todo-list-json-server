@@ -81,11 +81,11 @@ server.post("/auth/login", (req, res) => {
   if (isAuthenticated({ email, password }) === false) {
     const status = 401;
     const message = "Incorrect email or password";
-    res.status(status).json({ status, message });
+    res.status(status).json({ error: { status, message } });
     return;
   }
   const access_token = createToken({ email, password });
-  res.status(200).json({ access_token });
+  res.status(200).json({ data: { access_token } });
 });
 
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
