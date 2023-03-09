@@ -40,7 +40,7 @@ server.post("/auth/register", (req, res) => {
   if (isAuthenticated({ email, password }) === true) {
     const status = 401;
     const message = "Email and Password already exist";
-    res.status(status).json({ status, message });
+    res.status(status).json({ error: { status, message } });
     return;
   }
 
@@ -48,7 +48,7 @@ server.post("/auth/register", (req, res) => {
     if (err) {
       const status = 401;
       const message = err;
-      res.status(status).json({ status, message });
+      res.status(status).json({ error: { status, message } });
       return;
     }
 
@@ -64,7 +64,7 @@ server.post("/auth/register", (req, res) => {
         if (err) {
           const status = 401;
           const message = err;
-          res.status(status).json({ status, message });
+          res.status(status).json({ error: { status, message } });
           return;
         }
       }
@@ -72,7 +72,7 @@ server.post("/auth/register", (req, res) => {
   });
 
   const access_token = createToken({ email, password });
-  res.status(200).json({ access_token });
+  res.status(200).json({ data: { access_token } });
 });
 
 //login

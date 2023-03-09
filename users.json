@@ -1,7 +1,1 @@
-{
-  "users": [
-    { "id": 1, "email": "farnaz@farnaz.dev", "password": "farnaz" },
-    { "id": 2, "email": "jimmim@farnaz.dev", "password": "jimmim" },
-    { "id": 3, "email": "kamran@farnaz.dev", "password": "kamran" }
-  ]
-}
+{"users":[{"id":1,"email":"farnaz@farnaz.dev","password":"farnaz"},{"id":2,"email":"jimmim@farnaz.dev","password":"jimmim"},{"id":3,"email":"kamran@farnaz.dev","password":"kamran"},{"id":4,"email":"test","password":"test"},{"id":5,"email":"test1","password":"test"},{"id":6,"email":"test13","password":"test"},{"id":7,"email":"test1wefe","password":"test"}]}
