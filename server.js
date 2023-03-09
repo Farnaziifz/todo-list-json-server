@@ -11,7 +11,7 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
 server.use(jsonServer.defaults());
 
-const SECRET_KEY = "ompFinex-farnaz";
+const SECRET_KEY = "farnaz-omp";
 
 const expiresIn = "1h";
 
